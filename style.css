@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+:root {
+  ---btn-color: #6ea6a6;
+  --color-light: #9bc0ca;
+  --border-radius-one: 15px;
+  --btn-two: dodgerblue;
+  --btn-three: #8891a7;
+  --box-sadow-one: 0 0 7px #dfd7d7;
+}
+* {
+  margin: 0%;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(231, 244, 247);
+  font-family: "Poppins", sans-serif;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  color: rgb(217, 212, 212);
+  text-decoration: none;
+}
+a,
+p,
+li,
+span {
+  font-size: 2rem;
+}
+h1 {
+  font-size: 4.5rem;
+}
+h2,
+h3,
+h4,
+h5 {
+  color: black;
+  font-size: 3rem;
+}
+/* navigation bar */
+.container-width {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.btn {
+  text-align: center;
+  font-size: 2.2rem;
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius-one);
+}
+.btn-primary {
+  background-color: var(---btn-color);
+}
+.btn-two {
+  background-color: var(--btn-two);
+}
+.btn-three {
+  background-color: var(--btn-three);
+}
+.btn-block {
+  width: 100%;
+}
+
+.top-page {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(75px);
+  -webkit-backdrop-filter: blur(75px);
+}
+.hero {
+  padding: 1rem;
+  background-color: #646161;
+}
+.grid-1x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-1x3 {
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-1x4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+@media screen and (max-width: 900px) {
+  .grid-1x3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .grid-1x2 {
+    grid-template-columns: 1fr;
+  }
+  .grid-1x3 {
+    grid-template-columns: 1fr;
+  }
+  .grid-1x4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.navigation {
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.logo {
+  width: 100px;
+}
+.logo > img {
+  width: 100%;
+}
+.nav-list {
+  display: flex;
+  gap: 2rem;
+}
+.nav-links a:hover {
+  color: var(--color-light);
+}
+.icon-toggler {
+  color: var(--color-light);
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .navigation {
+    flex-wrap: wrap;
+  }
+  .icon-toggler {
+    display: block;
+  }
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin: 2rem;
+  }
+  /* .nav-links {
+    border-bottom: 1px solid #939090;
+  } */
+  /* javaScrippt */
+  .nav-list.show {
+    display: flex;
+  }
+  .nav-links {
+    border-bottom: 1px solid #939090;
+  }
+}
+/* hero section */
+.grid-hero {
+  align-items: center;
+}
+.hero-img {
+  max-width: 600px;
+}
+.hero-img > img {
+  width: 100%;
+}
+.hero-desc > h1 {
+  line-height: 1.2;
+}
+.hero-desc > p {
+  margin: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .grid-hero {
+    padding: 1.5rem;
+  }
+  .hero-desc {
+    text-align: center;
+  }
+}
+/* popular course */
+.popular-course {
+  padding: 0 2rem;
+}
+.course-card {
+  padding: 1.5rem;
+  margin: 7rem o;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: var(--box-sadow-one);
+}
+.pp-heading {
+  font-size: 4.5rem;
+  padding: 3rem;
+  text-align: center;
+}
+.course-img {
+  overflow: hidden;
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+}
+.course-img > img {
+  width: 100%;
+}
+.btn-container {
+  display: flex;
+  gap: 1.5rem;
+}
+.course-heading,
+.course-card > p {
+  text-align: center;
+}
+.btn-container {
+  display: flex;
+  gap: 2rem;
+}
+/* icon-cate */
+.cate-heading {
+  text-align: center;
+  font-size: 5rem;
+  margin: 7rem 0;
+}
+.icon-cate-link {
+  width: 150px;
+}
+
+.icon-cate-link > img {
+  width: 100%;
+  transition: tranform 2s;
+}
+.cate-link {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.cate-link:hover > .icon-cate-link > img {
+  transform: scale(1.05);
+}
+
+/* footer */
+.footer {
+  margin-top: 7rem;
+  background-color: rgb(60, 60, 68);
+  padding: 8rem 2rem;
+}
+.footer-link > a {
+  color: white;
+}
+.footer-link > a:hover {
+  color: var(--color-light);
+}
+.copy-right {
+  color: white;
+}
